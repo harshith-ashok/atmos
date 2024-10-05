@@ -85,7 +85,9 @@
 
 <div>
 	<div class="">
-		<div class="text-center text-[20vh] text-gray-400 font-thin font-mont">
+		<div
+			class="text-center text-[20vh] font-thin font-mont bg-gradient-to-r from-slate-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient"
+		>
 			{#if temperature}
 				{Math.round(temperature)}°
 			{:else}
@@ -99,7 +101,9 @@
 			<span class="loading loading-spinner loading-lg"></span>
 		{/if}
 	</div>
-	<div class="flex pt-5 justify-center join join-vertical md:join-horizontal lg:join-horizontal">
+	<div
+		class="flex pt-5 justify-center join join-vertical md:join-horizontal lg:join-horizontal font-mono"
+	>
 		<button
 			class="btn btn-outline join-item"
 			on:click={() => (selectedCity = 'Mumbai')}
@@ -159,7 +163,7 @@
 		>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Feels Like</h2>
-				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
+				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-blue-300">
 					{#if fl_like}
 						{Math.round(fl_like)}{:else}
 						<span class="loading loading-spinner loading-lg"></span>
@@ -168,7 +172,7 @@
 			</div>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Humidity</h2>
-				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
+				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-teal-400">
 					{#if master.humidity}{master.humidity}{:else}
 						<span class="loading loading-spinner loading-lg"></span>{/if}
 					<span class="text-[16px] normal-case tracking-normal">%</span>
@@ -176,7 +180,7 @@
 			</div>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Pressure</h2>
-				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
+				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-purple-400">
 					{#if master.pressure}{Math.round(master.pressure / 100)}{:else}
 						<span class="loading loading-spinner loading-lg"></span>{/if}
 					<span class="text-[16px] normal-case tracking-normal">pa</span>
@@ -209,7 +213,9 @@
 						<p class="text-lg text-center font-mono capitalize tracking-tight">
 							{forecast.weather[0].description}
 						</p>
-						<!-- <p class="text-lg text-center font-mono font-bold">{Math.round(forecast.main.temp)}°C</p> -->
+						<p class="text-lg text-center font-mono font-bold">
+							{Math.round(forecast.main.temp)}°C
+						</p>
 					</div>
 				{/each}
 			</div>

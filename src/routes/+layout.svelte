@@ -24,17 +24,20 @@
 				</div>
 				<ul
 					tabindex="0"
-					class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+					class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-mono"
 				>
 					<li><a href="/">Home</a></li>
 					<li><a href="about">About</a></li>
 					<li><a href="/weather">Weather</a></li>
 				</ul>
 			</div>
-			<a class="btn btn-ghost text-xl" href="/">atmos</a>
+			<a
+				class="btn btn-ghost text-xl bg-gradient-to-r from-slate-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient"
+				href="/">atmos</a
+			>
 		</div>
 		<div class="navbar-end hidden lg:flex">
-			<ul class="menu menu-horizontal px-1">
+			<ul class="menu menu-horizontal px-1 font-mono">
 				<li><a href="/">Home</a></li>
 				<li><a href="about">About</a></li>
 				<li><a href="/weather">Weather</a></li>
