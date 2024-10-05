@@ -134,8 +134,8 @@
 		>
 		<button
 			class="btn btn-outline join-item"
-			on:click={() => (selectedCity = 'Alaska')}
-			class:btn-error={selectedCity === 'Alaska'}>London</button
+			on:click={() => (selectedCity = 'London')}
+			class:btn-error={selectedCity === 'London'}>London</button
 		>
 	</div>
 	<div class="container mx-auto mt-10 px-10">
