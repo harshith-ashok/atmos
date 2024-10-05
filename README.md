@@ -39,4 +39,6 @@ npm run dev
 
 **Demo:**
 
+NGINX Hosting is underway and the link will be updated soon!
+
 Visit `https://atmos-ashen.vercel.app` in your browser to see the application in action.
