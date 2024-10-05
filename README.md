@@ -1,10 +1,12 @@
-## README.md for atmos Repository
-
-**Project Name:** atmos
+## atmos
 
 **Description:**
 
-This Svelte application displays the current temperature of a selected city and dynamically changes the background image based on the temperature range.
+Stay informed with accurate weather data powered by **OpenWeatherMap**. Our intuitive web app offers a minimalist design and interactive features, making it easy to find the weather information you need. From current conditions to daily forecasts, our app keeps you up-to-date and prepared for whatever the weather throws your way.
+
+**Svelte Kit** is a modern JavaScript framework that builds fast and reactive web applications. **Tailwind CSS** is a utility-first CSS framework for rapid styling. daisyUI is a component library that extends **Tailwind CSS** with pre-built components. Together, they provide a powerful and efficient stack for building web applications.
+
+Hosted wit the help of **NGINX** running on **Ubuntu Server** 18.04
 
 **Installation:**
 
@@ -20,6 +22,12 @@ git clone https://github.com/harshith-ashok/atmos.git
 npm install
 ```
 
+3. Change api key in `src/routes/weather/+page.svelte` line 50
+
+```svelte
+const apiKey = 'YOURAPIKEY';
+```
+
 **Usage:**
 
 1. Replace `YOUR_API_KEY` in `src/App.svelte` with your OpenWeatherMap API key.
@@ -31,4 +39,4 @@ npm run dev
 
 **Demo:**
 
-Visit `http://localhost:3000/` in your browser to see the application in action.
+Visit `https://atmos-ashen.vercel.app` in your browser to see the application in action.
