@@ -42,9 +42,7 @@ The search bar is very rudimentary and places the request directly on the API wi
 
 **Demo:**
 
-~~NGINX Hosting is underway and the link will be updated soon!~~
-
-Visit `https://atmos-ashen.vercel.app` in your browser to see the application in action.
+Visit [https://atmos-ashen.vercel.app](https://atmos-ashen.vercel.app) in your browser to see the application in action.
 
 ---
 **TODO:**
