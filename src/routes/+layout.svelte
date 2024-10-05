@@ -29,7 +29,6 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="about">About</a></li>
 					<li><a href="/weather">Weather</a></li>
-					<li><a href="/settings">Settings</a></li>
 				</ul>
 			</div>
 			<a class="btn btn-ghost text-xl" href="/">atmos</a>
@@ -39,7 +38,6 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="about">About</a></li>
 				<li><a href="/weather">Weather</a></li>
-				<li><a href="/settings">Settings</a></li>
 			</ul>
 		</div>
 	</div>

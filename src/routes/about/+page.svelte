@@ -17,11 +17,12 @@
 		provide a powerful and efficient stack for building web applications.
 	</div>
 </div>
-<div class="p-10 grid grid-flow-col gap-5 w-[500px]">
+
+<div class="p-10 grid grid-flow-row gap-5 w-auto lg:w-[500px]">
 	<div class="btn btn-outline font-mono text-xl">
-		<a href="https://github.com" class="text-purple-500">GitHub Repository</a>
+		<a href="https://github.com/harshith-ashok/atmos" class="text-purple-500">GitHub Repository</a>
 	</div>
 	<div class="btn btn-outline font-mono text-xl">
-		<a href="https://github.com" class="text-red-500">My Blog</a>
+		<a href="https://harshithashok.com" class="text-red-500">My Blog</a>
 	</div>
 </div>
