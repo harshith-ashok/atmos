@@ -6,7 +6,7 @@ Stay informed with accurate weather data powered by **OpenWeatherMap**. Our intu
 
 **Svelte Kit** is a modern JavaScript framework that builds fast and reactive web applications. **Tailwind CSS** is a utility-first CSS framework for rapid styling. daisyUI is a component library that extends **Tailwind CSS** with pre-built components. Together, they provide a powerful and efficient stack for building web applications.
 
-Hosted wit the help of **NGINX** running on **Ubuntu Server** 18.04
+Hosted with the help of **Vercel**
 
 **Installation:**
 
@@ -39,6 +39,6 @@ npm run dev
 
 **Demo:**
 
-NGINX Hosting is underway and the link will be updated soon!
+~~NGINX Hosting is underway and the link will be updated soon!~~
 
 Visit `https://atmos-ashen.vercel.app` in your browser to see the application in action.
