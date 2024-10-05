@@ -76,6 +76,7 @@
 	};
 
 	let onChangeAgeRange = 0;
+	let sCity = 'Chennai';
 
 	const onChange = () => {
 		onChangeAgeRange = user.ageRange;
@@ -91,26 +92,13 @@
 				<span class="loading loading-spinner loading-lg"></span>
 			{/if}
 		</div>
-		<!-- <img
-			src={`http://openweathermap.org/img/wn/${icn}@2x.png`}
-			alt="Weather icon"
-			class="w-16 h-16 mx-auto"
-		/> -->
 	</div>
 	<div class="text-center text-4xl text-gray-800 font-normal font-mont capitalize">
 		{#if cloud}
-			{cloud}
+			{cloud}{:else}
+			<span class="loading loading-spinner loading-lg"></span>
 		{/if}
 	</div>
-	<!-- <div class="flex pt-5 justify-center join join-vertical lg:join-horizontal">
-	<button class="btn btn-outline join-item" on:click={() => (selectedCity = 'Chennai')}
-		>Chennai</button
-	>
-	<button class="btn btn-outline join-item" on:click={() => (selectedCity = 'Mumbai')}
-		>Mumbai</button
-	>
-	<button class="btn btn-outline join-item" on:click={() => (selectedCity = 'Delhi')}>Delhi</button>
-</div> -->
 	<div class="flex pt-5 justify-center join join-vertical md:join-horizontal lg:join-horizontal">
 		<button
 			class="btn btn-outline join-item"
@@ -119,13 +107,13 @@
 		>
 		<button
 			class="btn btn-outline join-item"
-			on:click={() => (selectedCity = 'Chennai')}
-			class:btn-error={selectedCity === 'Chennai'}>Chennai</button
+			on:click={() => (selectedCity = 'Delhi')}
+			class:btn-error={selectedCity === 'Delhi'}>Delhi</button
 		>
 		<button
 			class="btn btn-outline join-item"
-			on:click={() => (selectedCity = 'Delhi')}
-			class:btn-error={selectedCity === 'Delhi'}>Delhi</button
+			on:click={() => (selectedCity = 'Chennai')}
+			class:btn-error={selectedCity === 'Chennai'}>Chennai</button
 		>
 		<button
 			class="btn btn-outline join-item"
@@ -138,6 +126,33 @@
 			class:btn-error={selectedCity === 'London'}>London</button
 		>
 	</div>
+	<form on:submit={fetchWeatherData(selectedCity)} class="flex pt-5 justify-center gap-1">
+		<input
+			type="text"
+			placeholder="Enter City"
+			class="input input-bordered w-full max-w-xs font-mono"
+			bind:value={sCity}
+		/>
+		<div class="tooltip" data-tip="City name as per Google Maps">
+			<button class="btn btn-outline btn-info rounded-sm w-fill"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="currentColor"
+					class="bi bi-info"
+					viewBox="0 0 16 16"
+				>
+					<path
+						d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+					/>
+				</svg></button
+			>
+		</div>
+		<button type="submit" class="btn btn-outline font-mono" on:click={(selectedCity = sCity)}
+			>Get Weather</button
+		>
+	</form>
 	<div class="container mx-auto mt-10 px-10">
 		<div
 			class="mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-base rounded-md py-4 border shadow-sm hover:shadow-lg"
@@ -145,26 +160,34 @@
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Feels Like</h2>
 				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
-					{Math.round(fl_like)}°
+					{#if fl_like}
+						{Math.round(fl_like)}{:else}
+						<span class="loading loading-spinner loading-lg"></span>
+					{/if}°
 				</p>
 			</div>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Humidity</h2>
 				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
-					{master.humidity} <span class="text-[16px] normal-case tracking-normal">%</span>
+					{#if master.humidity}{master.humidity}{:else}
+						<span class="loading loading-spinner loading-lg"></span>{/if}
+					<span class="text-[16px] normal-case tracking-normal">%</span>
 				</p>
 			</div>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Pressure</h2>
 				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
-					{Math.round(master.pressure / 100)}
+					{#if master.pressure}{Math.round(master.pressure / 100)}{:else}
+						<span class="loading loading-spinner loading-lg"></span>{/if}
 					<span class="text-[16px] normal-case tracking-normal">pa</span>
 				</p>
 			</div>
 			<div>
 				<h2 class="text-center text-xl font-mono font-bold pb-2">Wind</h2>
 				<p class="text-center text-5xl font-mont capitalize tracking-tight py-4 text-gray-700">
-					{wind} <span class="text-[16px] normal-case tracking-normal">m-sec</span>
+					{#if wind}{wind}{:else}
+						<span class="loading loading-spinner loading-lg"></span>{/if}
+					<span class="text-[16px] normal-case tracking-normal">m-sec</span>
 				</p>
 			</div>
 		</div>
