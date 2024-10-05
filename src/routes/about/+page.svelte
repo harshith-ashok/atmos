@@ -16,6 +16,9 @@
 		daisyUI is a component library that extends Tailwind CSS with pre-built components. Together, they
 		provide a powerful and efficient stack for building web applications.
 	</div>
+	<div class="py-2 font-mono text-xl">
+		Hosted wit the help of NGINX running on Ubuntu Server 18.04
+	</div>
 </div>
 
 <div class="p-10 grid grid-flow-row gap-5 w-auto lg:w-[500px]">
