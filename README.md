@@ -37,8 +37,16 @@ const apiKey = 'YOURAPIKEY';
 npm run dev
 ```
 
+**Warning:**
+The search bar is very rudimentary and places the request directly on the API wihtout prior checking which might lead to the website becoming unresponsive since the API sends no request back. So in case that happens please reload the website!
+
 **Demo:**
 
 ~~NGINX Hosting is underway and the link will be updated soon!~~
 
 Visit `https://atmos-ashen.vercel.app` in your browser to see the application in action.
+
+---
+**TODO:**
+- Fix search bar
+- Host in NGINX
