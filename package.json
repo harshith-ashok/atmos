@@ -1,6 +1,6 @@
 {
-	"name": "porf",
-	"version": "0.0.1",
+	"name": "atmos",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -8,8 +8,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check .",
-		"format": "prettier --write .",
-		"genql": "genql --endpoint https://harshithashok/graphql --output generated --esm"
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.0.0",

@@ -86,7 +86,7 @@
 <div>
 	<div class="">
 		<div
-			class="text-center text-[20vh] font-thin font-mont bg-gradient-to-r from-slate-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient"
+			class="lg:mt-[-110px] text-center text-[20vh] font-thin font-mont bg-gradient-to-r from-slate-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient"
 		>
 			{#if temperature}
 				{Math.round(temperature)}°
@@ -95,7 +95,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="text-center text-4xl text-gray-800 font-normal font-mont capitalize">
+	<div class="mt-[-20px] text-center text-4xl text-gray-800 font-normal font-mont capitalize">
 		{#if cloud}
 			{cloud}{:else}
 			<span class="loading loading-spinner loading-lg"></span>
